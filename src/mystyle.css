@@ -1,0 +1,28 @@
+button
+{
+    display: block;
+    margin-bottom: 10px;
+}
+#my_canvas_holder
+{
+    margin-top: 10px;
+    max-width: 100vw;
+    background-color: black;
+}
+#my_canvas
+{
+    display: block;
+    margin: auto;
+}
+main
+{
+    max-width: 832px;
+    margin: auto;
+    background-color: darkcyan;
+    padding:10px;
+}
+body
+{
+    background-color: black;
+}
+.box:last-child { margin-bottom: 1.5rem; }
