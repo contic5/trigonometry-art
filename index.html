@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Animation</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+      <script type="module" crossorigin src="/trigonometry-art/assets/index-CqSfvBFN.js"></script>
+      <link rel="stylesheet" crossorigin href="/trigonometry-art/assets/index-DXFJFRYa.css">
+    </head>
+    <body>
+    <main>
+    <h1 class="title is-1">Trigonometry Art</h1>
+    <h2 class="subtitle is-2">Setup</h2>
+    <p><b>Math can create art.</b></p>
+    <p>Trigometric Graphs are graphs that depend on sin and cosine values. The x and y values depend on the time t.</p>
+    <p>This program generates points by calculating x and y values for different t values. It then draws a circle centered at each point.</p>
+    <p>Circles are the easiest example. The x value is cos(t) and the y value is sin(t). The minimum and maximum sin and cosine values are -1 and 1. The program multiplies the x and y values by the canvas' width and height. Afterwards, it moves the x and y values over by half the canvas width and half the canvas height.</p>
+    <h2 class="subtitle is-2">Settings</h2>
+    <button onclick="toggle_interval()" id="toggle_button">PAUSE</button>
+    
+    <label for="hue_reverse">Hue Reverse</label>
+    <input type="checkbox" id="hue_reverse">
+        
+    <label for="move_reverse">Move Reverse</label>
+    <input type="checkbox" id="move_reverse">
+        
+    <label for="clearing_every_frame">Clearing Every Frame</label>
+    <input type="checkbox" id="clearing_every_frame" checked>
+        
+    <label for="using_erase_circles">Using Erase Circles</label>
+    <input type="checkbox" id="using_erase_circles">
+    
+    <label for="total_points">Total Points</label>
+    <input id="total_points" min=1 max=75 value=21 type="range">
+        
+    <select id="draw_function">
+    <option value="circle">Circle</option>
+    <option value="butterfly">Butterfly</option>
+    <option value="hypotrochoid">Hypotrochoid (Nested Loops)</option>
+    <option value="epicycloid">Epicycloid (Petals)</option>
+    <option value="cloverleaf">Cloverleaf (Rose Curve)</option>
+    <option value="lissajous">Lissajous (Loop Patterns)</option>
+    <option value="infinity">Infinity</option>   
+    </select>
+        
+    <label for="color_mode">Color Mode</label>
+    <select id="color_mode">
+    <option value="standard" selected>Standard</option>
+    <option value="no_change">No Change</option>
+    <option value="same_color">Same Color</option>
+    <option value="black_and_white">Black and White</option>
+    </select>
+    <h2 class="subtitle is-2">Current Formula</h2>
+    <div id="written_formula">
+        
+    </div>
+    <h2 class="subtitle is-2">The Drawing</h2>
+    </main>
+
+    <div id="my_canvas_holder">
+    <canvas id="my_canvas" width="832" height="832"></canvas>
+    </div>
+
+    </body>
+</html>
